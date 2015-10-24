@@ -1,0 +1,216 @@
+/* 
+    Created on : 30.05.2015, 12:33:14
+    Author     : Jan Ackermann
+    Filename   : style
+*/
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway-Regular.ttf") format("truetype"); }
+main {
+  padding-left: 70px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+#time2 > span:first-child {
+  width: 40px;
+  float: left; }
+
+#time2 > span:nth-child(2) {
+  width: 27.5px;
+  float: left; }
+
+div.doing-item:nth-child(1) > span:nth-child(2) {
+  right: 53px; }
+
+.doing-item > span:not(:first-child) {
+  right: 53px !important; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21.06.2015, 17:32:42
+    Author     : Jan Ackermann
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22.06.2015, 18:58:08
+    Author     : Jan Ackermann
+*/
+.time {
+  height: 150px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 0 3px 1px #a7acb1;
+  font-family: Raleway;
+  position: relative;
+  margin-bottom: 50px; }
+  .time-month {
+    height: 50px;
+    width: 100%;
+    color: #2ecc71;
+    font-size: 33px;
+    margin-left: 10px;
+    margin-right: 20px;
+    position: relative; }
+    .time-month:after {
+      position: absolute;
+      content: '';
+      top: 50px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 12px 7px 0 7px;
+      border-color: #fff transparent transparent; }
+    .time-month p {
+      width: 100%;
+      padding-top: 8px; }
+      .time-month p span {
+        color: #7f8c8d;
+        font-size: 13px;
+        position: absolute;
+        right: 40px;
+        top: 30px; }
+  .time-clock {
+    height: 100px;
+    background: #2ecc71;
+    width: 100%;
+    text-align: center;
+    font-size: 85px; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23.06.2015, 18:31:29
+    Author     : Jan Ackermann
+*/
+.sidebar {
+  /*width:550px;
+  height:100%;
+  position: absolute;
+  left: -250px;
+  z-index: 999;
+  overflow: hidden;*/
+  position: absolute;
+  left: -250px;
+  z-index: 999; }
+  .sidebar-bar {
+    width: 50px;
+    height: 100%;
+    background: #2ecc71;
+    box-shadow: -2px 0 3px -1px #000;
+    float: right;
+    margin-right: -60px;
+    margin-top: -10px; }
+  .sidebar-content {
+    width: 230px;
+    height: 100vh;
+    background: #ecf0f1;
+    float: left;
+    padding: 10px;
+    padding-right: 60px; }
+  .sidebar-icon {
+    position: relative;
+    top: 11px;
+    left: 11px; }
+
+.doing {
+  font-family: Raleway;
+  box-shadow: 0 0 3px 1px #a7acb1;
+  overflow: hidden; }
+  .doing-head {
+    height: 50px;
+    width: 100%;
+    color: #2ecc71;
+    font-size: 33px;
+    margin-left: 10px;
+    margin-right: 20px;
+    position: relative; }
+    .doing-head p {
+      padding-top: 8px; }
+    .doing-head:after {
+      position: absolute;
+      content: '';
+      top: 50px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 12px 7px 0 7px;
+      border-color: #fff transparent transparent; }
+  .doing-item {
+    color: #fff;
+    height: 50px;
+    background: #2ecc71;
+    width: 100%;
+    box-shadow: 0 0 2px 0.5px #000;
+    position: relative; }
+    .doing-item p {
+      font-size: 33px;
+      padding-top: 8px;
+      padding-left: 10px; }
+    .doing-item span {
+      font-size: 12px;
+      position: absolute;
+      top: 35px;
+      right: 10px; }
+    .doing-item:nth-child(1) {
+      box-shadow: none; }
+
+#save {
+  width: 300px;
+  height: 20px; }
+
+/*# sourceMappingURL=style.css.map */

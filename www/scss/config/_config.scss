@@ -1,0 +1,30 @@
+@font-face { font-family: 'Raleway'; 
+             src: url('../fonts/Raleway-Regular.ttf') format('truetype'); }
+
+$primary-color: #2ecc71;
+$secondary-color: #fff;
+$background-color: #ecf0f1;
+$primary-shadow: 0 0 3px 1px #a7acb1;
+$secondary-shadow: 0 0 2px 0.5px #000;
+$raleway: Raleway;
+
+main{    
+    padding-left: 70px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#time2 > span:first-child{
+  width: 40px;
+  float:left;  
+}
+#time2 > span:nth-child(2){
+  width: 27.5px;
+  float:left;  
+}
+div.doing-item:nth-child(1) > span:nth-child(2){
+  right:53px
+}
+.doing-item > span:not(:first-child){
+  right: 53px!important;
+}

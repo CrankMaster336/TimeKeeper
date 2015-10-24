@@ -1,0 +1,65 @@
+<html>
+    <head>    
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">        
+        <script language="javascript" type="text/javascript" src="js/libs/jquery/jquery.js"></script>
+        <script language="javascript" type="text/javascript" src="js/libs/jqueryui/jquery-ui.js"></script>
+        <script language="javascript" type="text/javascript" src="js/libs/draggableExtension/draggablePlus.js"></script>
+        <script language="javascript" type="text/javascript" src="js/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Modules</title>
+    </head>
+    <body>
+        
+        
+        <section style="width:310px;">
+            <div class="doing">
+                <div class="doing-head" id="NewDoing">
+                    <p>Neues Doing</p>
+                </div>
+                <div id="DoingList"></div>
+            </div>
+        </section>
+        
+        
+        <script>
+            var i = 0;
+            var isOpen = false;
+
+            $('#NewDoing').click(function () {
+                var currentTime = new Date();
+                var year = currentTime.getFullYear();
+                var month = currentTime.getMonth();
+                var day = currentTime.getDay();
+                var hour = currentTime.getHours();
+                var minutes = currentTime.getMinutes();
+                var seconds = currentTime.getSeconds();
+
+                if(!isOpen){
+                    i++;
+                    var fullList = $('#DoingList').html();
+                    fullList = '<div class="doing-item"  timeInfo="' + currentTime + '"><div id="name'+ i +'"><input type="text" name="doingTime" id="saveName"></div><span>' + hour + ':' + minutes + ':' + seconds + ' - <div id="time"></div></span><div id="save">Save</div></div>' + fullList;
+                    $('#DoingList').html(fullList);
+                    isOpen = true;
+                }
+
+            });
+
+            $(document).on("click", '#save', function () {
+                var saveName = $('#saveName').val();
+                if(saveName != ""){
+                    $('#name' + i).html('<p class="doing-item--name">' + saveName + '</p>');
+                    $('#save').html('');
+                    isOpen = false;
+                }
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
